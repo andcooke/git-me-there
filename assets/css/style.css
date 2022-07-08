@@ -5,12 +5,27 @@ body {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
+    
+    
   }
+
 
   main {
     flex: 1 0 auto;
   }
+
+  .img-container{
+    padding: 50px;
+    justify-content: space-between;
+  }
+
+  .transportation{
+ margin:50;
+  }
+    
+
       
   .custom-footer {
     padding-bottom: 5px;
 }
+

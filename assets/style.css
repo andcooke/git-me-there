@@ -1,0 +1,40 @@
+#page-container{
+    position: relative;
+    min-height: 100vh;
+    background-image: url('https://images.unsplash.com/photo-1517732306149-e8f829eb588a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cGVvcGxlJTIwd2Fsa2luZ3xlbnwwfHwwfHw%3D&w=1000&q=80');
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+
+#header1{
+    text-align: center;
+    padding-top: 100px;
+    font-size: 100px;
+    color: rgb(226, 226, 28);
+}
+    
+    
+    
+
+#header3{
+    text-align: center;
+}
+
+#search-input-bar{
+    text-align: center  ;
+}
+
+
+   
+
+.footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem;
+    text-align: center;
+    font-size: x-large;
+    background-size: 15px;
+    
+}
