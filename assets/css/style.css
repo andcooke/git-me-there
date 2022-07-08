@@ -1,0 +1,16 @@
+
+/* makes footer stick to bottom of page regardless of content */
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+  main {
+    flex: 1 0 auto;
+  }
+      
+  .custom-footer {
+    padding-bottom: 5px;
+}
