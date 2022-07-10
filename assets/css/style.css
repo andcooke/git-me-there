@@ -40,11 +40,12 @@ body {
   
 } 
  
-#textarea1{
+#search-input{
   background-color: white;
   padding-left: 25px;
   border-radius: 12px;
   box-shadow: 100px;
+  width: min-content;
 }
 
 
@@ -61,12 +62,7 @@ body {
  margin:50;
   }
     
-#textarea1{
-  
-  width: min-content;
-  
-}
-      
+
   .custom-footer {
     padding-bottom: 5px;
 }
