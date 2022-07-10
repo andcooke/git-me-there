@@ -1,70 +1,62 @@
-// const encodedParams = new URLSearchParams();
-// encodedParams.append("q", "austin" /* document.getElementById().value */);
-// encodedParams.append("language", "en_US");
+let searchBtnEl = document.querySelector("#search-button");
+let searchInputEl = document.querySelector("#search-input");
+let city;
+let restaurantAPI; 
+let cityID;
 
-// const options = {
-// 	method: 'POST',
-// 	headers: {
-// 		'content-type': 'application/x-www-form-urlencoded',
-// 		'X-RapidAPI-Key': '370f54f2b9msh3011f7c5797392ap1b9f9ejsn697ea2a01f14',
-// 		'X-RapidAPI-Host': 'worldwide-restaurants.p.rapidapi.com'
-// 	},
-// 	body: encodedParams
-// };
-
-
-// function getCityId () {
-//     fetch('https://worldwide-restaurants.p.rapidapi.com/typeahead', options)
-//         .then(function(response) {
-//             return response.json()
-//         })
-//         .then(function(data) {
-//             console.log(data);
-//             console.log(data.results.data[0].result_object.location_id);
-//         })
-//         .then (getRestaurants())
-//         .catch(err => console.error(err));
-// }
-
-// getCityId();
-
-let testCityId = "30196";
+searchBtnEl.addEventListener("click", function() {
+    city = searchInputEl.value
+    if (!city) {
+        window.alert("Please input a city")
+    } else {
+        getRestaurants();
+    }
+});
 
 function getRestaurants () {
-
-
-
-    const encodedParams = new URLSearchParams();
-    encodedParams.append("language", "en_US");
-    encodedParams.append("limit", "5");
-    encodedParams.append("location_id", "30196");
-    encodedParams.append("currency", "USD");
-
-const options = {
-	method: 'POST',
-	headers: {
-		'content-type': 'application/x-www-form-urlencoded',
-		'X-RapidAPI-Key': '370f54f2b9msh3011f7c5797392ap1b9f9ejsn697ea2a01f14',
-		'X-RapidAPI-Host': 'worldwide-restaurants.p.rapidapi.com'
-	},
-	body: encodedParams
-};
-
-fetch('https://worldwide-restaurants.p.rapidapi.com/search', options)
-	.then(function(response) {
+    let getCityIdAPI = `https://travel-advisor.p.rapidapi.com/locations/search?query=${city}&limit=4&offset=0&units=km&location_id=1&currency=USD&sort=relevance&lang=en_US`;
+    const options = {
+        method: 'GET',
+        headers: {
+            'X-RapidAPI-Key': 'b95d5ed815mshc7dd19832c693c4p11f823jsndfc45b75b8c8',
+            'X-RapidAPI-Host': 'travel-advisor.p.rapidapi.com'
+        }
+    };
+    
+    fetch(getCityIdAPI, options)
+    .then(function(response) {
         return response.json();
     })
-	.then(function(data) {
-        for (let i = 0; i < 5; i ++){
-            //console.log(data)
-            console.log("Name of Restaurant:", data.results.data[i].name);
-            console.log("Image of Restuarant", data.results.data[i].photo.images.small.url)
-            console.log("Address of Restaurant:", data.results.data[i].address)
-            console.log("Link to Restaurant Website:", data.results.data[i].website);
-            console.log("----------------")
-        }
-    })
-	.catch(err => console.error(err));
+    .then(function(data) {
+        //works -> console.log(city)
+        //console.log(data)
+        //console.log(data.data[0].result_object.location_id);
+        cityID = data.data[0].result_object.location_id;
+        getRestaurantInfo();
+    });
 }
 
-getRestaurants();
+function getRestaurantInfo() {
+    const options = {
+        method: 'GET',
+        headers: {
+            'X-RapidAPI-Key': 'b95d5ed815mshc7dd19832c693c4p11f823jsndfc45b75b8c8',
+            'X-RapidAPI-Host': 'travel-advisor.p.rapidapi.com'
+        }
+    };
+    
+    fetch(`https://travel-advisor.p.rapidapi.com/restaurants/list?location_id=${cityID}&restaurant_tagcategory=10591&restaurant_tagcategory_standalone=10591&currency=USD&lunit=mi&limit=5&open_now=true&lang=en_US`, options)
+    .then(function(response) {
+        return response.json();
+    })
+    .then(function(data) {
+        for (let i = 0; i < 4; i++){
+            //console.log(data);
+            console.log("Name: ", data.data[i].name)
+            console.log("Address: ", data.data[i].address)
+            console.log("Website: ", data.data[i].website)
+            console.log("Picture: ", data.data[i].photo.images.original.url)
+        }
+    });
+}
+

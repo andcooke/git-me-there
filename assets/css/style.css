@@ -2,12 +2,50 @@
 /* makes footer stick to bottom of page regardless of content */
 
 body {
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
-    
-    
-  }
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  background-image: url("../images/photo-1517732306149-e8f829eb588a.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+  
+/* #page-container{
+  position: relative;
+  min-height: 100vh;
+  background-image: url('https://images.unsplash.com/photo-1517732306149-e8f829eb588a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cGVvcGxlJTIwd2Fsa2luZ3xlbnwwfHwwfHw%3D&w=1000&q=80');
+  background-repeat: no-repeat;
+  background-size: 100%;
+} */
+
+.container{
+  opacity: 500;
+  
+}   
+
+.center{
+
+  font-weight: 900;
+  color: beige;
+  text-shadow: 0 0 3px black;
+  
+}
+
+
+#header3{
+  font-weight: 900;
+  font-size: x-large;
+  color: beige;
+  text-shadow: 0 0 3px black;
+  
+} 
+ 
+#textarea1{
+  background-color: white;
+  padding-left: 25px;
+  border-radius: 12px;
+  box-shadow: 100px;
+}
 
 
   main {
@@ -23,7 +61,11 @@ body {
  margin:50;
   }
     
-
+#textarea1{
+  
+  width: min-content;
+  
+}
       
   .custom-footer {
     padding-bottom: 5px;
