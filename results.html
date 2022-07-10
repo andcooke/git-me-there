@@ -26,26 +26,30 @@
 
   <!-- main content -->
   <main class="container">
-
-    <div class="row center">
-
-      <div class="col s4">
-        Flinstonemobile, scooter or train?
-        <br>
-        <br>
-        Decide how you get around the next place you visit!
-        <div class="input-field col s12">
-          <textarea id="textarea1" class="materialize-textarea"></textarea>
-          <label for="textarea1">Enter Location</label>
+    <div class="row">
+      <!-- walking-score -->
+      <div class="col s12 m4 score-box">
+        <div>Walking Score: <span id="walking-score"></span></div>
+        <div>Biking Score: <span id="biking-score"></span></div>
+        <div>
+          <!-- empty div for nickname of city? eg. walker's paradise, biker's paradise -->
         </div>
         <div>
-          <a class="waves-effect waves-light btn center" id="search-button">Search</a>
-        </div>
 
+          <!-- another empty div for unforeseen things to add -->
+
+          <a class="waves-effect waves-light btn center" id="search-button">Search</a>
+          
+        </div>
+        <br>
+        <!-- the following will show up if walking score > certain number -->
+        <div class="center hidden"> <a href="https://m.uber.com/ul/?action=setPickup"><img
+              src="./assets/images/uber_rides_api_icon_2x_28px.png" alt="Uber Logo"></a> <br>Need a ride?</div>
       </div>
 
+
       <div class="row">
-        <div class="col s4">
+        <div class="col s12 m4">
           <div class="card card-panel hoverable">
             <div class="card-image">
               <img src="images/sample-1.jpg">
@@ -61,7 +65,7 @@
           </div>
         </div>
 
-        <div class="col s4">
+        <div class="col s12 m4">
           <div class="card card-panel hoverable">
             <div class="card-image">
               <img src="images/sample-1.jpg">
@@ -78,10 +82,7 @@
         </div>
 
         <div class="row">
-          <div class="col s4">
-            <!--Empty column-->
-          </div>
-          <div class="col s4">
+          <div class="col s12 m4  offset-m4">
             <div class="card card-panel hoverable">
               <div class="card-image">
                 <img src="images/sample-1.jpg">
@@ -97,7 +98,7 @@
             </div>
           </div>
 
-          <div class="col s4">
+          <div class="col s12 m4">
             <div class="card card-panel hoverable">
               <div class="card-image">
                 <img src="images/sample-1.jpg">
@@ -112,9 +113,26 @@
               </div>
             </div>
           </div>
-
         </div>
 
+        <!-- search for new location -->
+        <div class="row">
+          <div class="center col s12 m4 offset-m4">
+            Decide how you get around the next place you visit!
+            <div class="input-field col s12">
+              <textarea id="textarea1" class="materialize-textarea"></textarea>
+              <label for="textarea1">Enter Your Destination</label>
+            </div>
+            <div>
+              <a class="waves-effect waves-light btn">Search</a>
+            </div>
+            <div>
+              <!-- empty div for old searches to show up add id-->
+            </div>
+          </div>
+
+
+        </div>
 
   </main>
 

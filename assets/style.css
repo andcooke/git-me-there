@@ -14,7 +14,6 @@
     color: rgb(226, 226, 28);
 }
 
-    
 
 #header3{
     text-align: center;
@@ -36,4 +35,8 @@
     font-size: x-large;
     background-size: 15px;
     
+}
+
+.score-box {
+    border: 1px solid black;
 }
