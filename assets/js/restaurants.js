@@ -1,30 +1,20 @@
-let searchBtnEl = document.querySelector("#search-button");
-let searchInputEl = document.querySelector("#search-input");
-let city;
-let restaurantAPI; 
-let cityID;
 
-// Code for Modal
-$(document).ready(function(){
-    $('.modal').modal();
-})
+const searchBtnEl = document.querySelector("#search-button");
+const searchInputEl = document.querySelector("#search-input");
+const restaurantTitle = document.querySelector("#restaurant-test")
 
-function toggleModal(){
-    var instance = M.Modal.getInstance($('#modal3'))
-    instance.open();
-}
 
-searchBtnEl.addEventListener("click", function() {
-    city = searchInputEl.value
-    if (!city) {
-        // window.alert("Please input a city")
-        toggleModal();
-    } else {
-        getRestaurants();
-    }
-});
 
-function getRestaurants () {
+function getParams() {
+    //console.log(document.location.search);
+    const city = document.location.search.split("=").pop();
+    getRestaurants(city);
+
+};
+
+
+function getRestaurants (city) {
+
     let getCityIdAPI = `https://travel-advisor.p.rapidapi.com/locations/search?query=${city}&limit=4&offset=0&units=km&location_id=1&currency=USD&sort=relevance&lang=en_US`;
     const options = {
         method: 'GET',
@@ -42,12 +32,12 @@ function getRestaurants () {
         //works -> console.log(city)
         //console.log(data)
         //console.log(data.data[0].result_object.location_id);
-        cityID = data.data[0].result_object.location_id;
-        getRestaurantInfo();
+        const cityID = data.data[0].result_object.location_id;
+        getRestaurantInfo(cityID);
     });
 }
 
-function getRestaurantInfo() {
+function getRestaurantInfo(cityID) {
     const options = {
         method: 'GET',
         headers: {
@@ -61,13 +51,32 @@ function getRestaurantInfo() {
         return response.json();
     })
     .then(function(data) {
-        for (let i = 0; i < 4; i++){
+        const restTitleEl = document.querySelector("#rest-1");
+        restTitleEl.textContent =  data.data[0].name;
+        //for (let i = 0; i < 4; i++){
             //console.log(data);
-            console.log("Name: ", data.data[i].name)
-            console.log("Address: ", data.data[i].address)
-            console.log("Website: ", data.data[i].website)
-            console.log("Picture: ", data.data[i].photo.images.original.url)
-        }
+            //console.log("Name: ", data.data[i].name)
+            //restaurantTitle.textContent = data.data[0].name
+            //console.log("Address: ", data.data[i].address)
+            //console.log("Website: ", data.data[i].website)
+            //console.log("Picture: ", data.data[i].photo.images.original.url)
+            //localStorage.setItem("test", data.data[i].name);
+            //imageEl.setAttribute("src", localStorage.getItem("imate-test"));
+        //}
+
     });
 }
 
+
+// Code for Modal
+$(document).ready(function(){
+    $('.modal').modal();
+})
+
+function toggleModal(){
+    var instance = M.Modal.getInstance($('#modal3'))
+    instance.open();
+}
+
+getParams()
+ 
