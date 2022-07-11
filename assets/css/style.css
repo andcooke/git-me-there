@@ -6,19 +6,34 @@ body {
   background-image: url("../images/photo-1517732306149-e8f829eb588a.jpg");
   background-repeat: no-repeat;
   background-size: 100%;
-}
+  font-family: fantasy;
+} 
   
 main {
   flex: 1 0 auto;
 }
- #page-container{
+ /* #page-container{
   position: relative;
   min-height: 100vh;
   background-image: url('https://images.unsplash.com/photo-1517732306149-e8f829eb588a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cGVvcGxlJTIwd2Fsa2luZ3xlbnwwfHwwfHw%3D&w=1000&q=80');
   background-repeat: no-repeat;
   background-size: 100%;
-} 
+}  */
 
+#textarea1 {
+  background-color: white;
+  width: 250px;
+  border-radius: 15px;
+}
+::placeholder {
+  text-align: center;
+  font-family: fantasy;
+}
+
+#search-button {
+  width: 100px;
+  border-radius: 15px;
+}
 /* Class Selectors */
 .container{
   opacity: 500;
