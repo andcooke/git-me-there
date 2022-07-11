@@ -105,7 +105,6 @@ function getRestaurantInfo(cityID) {
     });
 }
 
-
 function saveButton(city) {
     if (localStorage.getItem("recent")) {
         recentSearches = JSON.parse(localStorage.getItem("recent"))
@@ -139,8 +138,6 @@ function printButtons(recentSearch) {
         }
     }
 }
-
-
 
 getParams();
 
