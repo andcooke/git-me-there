@@ -1,5 +1,4 @@
 
-    
 const searchBtnEl = document.querySelector("#search-button");
 const searchInputEl = document.querySelector("#search-input");
 const restaurantTitle = document.querySelector("#restaurant-test")
@@ -11,10 +10,11 @@ function getParams() {
     const city = document.location.search.split("=").pop();
     getRestaurants(city);
 
-}
+};
 
 
 function getRestaurants (city) {
+
     let getCityIdAPI = `https://travel-advisor.p.rapidapi.com/locations/search?query=${city}&limit=4&offset=0&units=km&location_id=1&currency=USD&sort=relevance&lang=en_US`;
     const options = {
         method: 'GET',
@@ -65,6 +65,17 @@ function getRestaurantInfo(cityID) {
         //}
 
     });
+}
+
+
+// Code for Modal
+$(document).ready(function(){
+    $('.modal').modal();
+})
+
+function toggleModal(){
+    var instance = M.Modal.getInstance($('#modal3'))
+    instance.open();
 }
 
 getParams()
