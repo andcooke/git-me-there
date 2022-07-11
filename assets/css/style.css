@@ -11,13 +11,13 @@ body {
 main {
   flex: 1 0 auto;
 }
-/* #page-container{
+ #page-container{
   position: relative;
   min-height: 100vh;
   background-image: url('https://images.unsplash.com/photo-1517732306149-e8f829eb588a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cGVvcGxlJTIwd2Fsa2luZ3xlbnwwfHwwfHw%3D&w=1000&q=80');
   background-repeat: no-repeat;
   background-size: 100%;
-} */
+} 
 
 /* Class Selectors */
 .container{
