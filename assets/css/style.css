@@ -1,5 +1,6 @@
 /* Element Selectors */
 body {
+  color:orange;
   display: flex;
   min-height: 100vh;
   flex-direction: column;
@@ -33,6 +34,8 @@ main {
 #search-button {
   width: 100px;
   border-radius: 15px;
+  background-color:black;
+  color:white;
 }
 /* Class Selectors */
 .container{
@@ -56,6 +59,10 @@ main {
     
 .custom-footer {
   padding-bottom: 5px;
+  background-color:white;
+  color;
+  text-align:center;
+  color:#0B2559;
 }
 
 .score-box {
@@ -64,6 +71,7 @@ main {
   opacity: 0.7;
   border-radius: 15px;
   line-height: 30px;
+  color:darkgoldenrod;
 }
 
 .score {
@@ -106,5 +114,5 @@ main {
 
 #body-results {
   background-image: none;
-  background-color: grey;
+  background-color:peachpuff;
 }
