@@ -18,6 +18,7 @@ const handleSearchSubmit = (event) => {
 
 searchButtonEl.addEventListener("click", handleSearchSubmit);
 
+
     // Code for Modal
     //materialize syntax
     $(document).ready(function(){

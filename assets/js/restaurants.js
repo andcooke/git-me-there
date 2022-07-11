@@ -1,7 +1,23 @@
+let title1El = document.querySelector("#title1");
+let title2El = document.querySelector("#title2");
+let title3El = document.querySelector("#title3");
+let title4El = document.querySelector("#title4");
 
-const searchBtnEl = document.querySelector("#search-button");
-const searchInputEl = document.querySelector("#search-input");
-const restaurantTitle = document.querySelector("#restaurant-test")
+let img1El = document.querySelector("#img1");
+let img2El = document.querySelector("#img2");
+let img3El = document.querySelector("#img3");
+let img4El = document.querySelector("#img4");
+
+let p1El = document.querySelector("#p1");
+let p2El = document.querySelector("#p2");
+let p3El = document.querySelector("#p3");
+let p4El = document.querySelector("#p4");
+
+let link1El = document.querySelector("#link1");
+let link2El = document.querySelector("#link2");
+let link3El = document.querySelector("#link3");
+let link4El = document.querySelector("#link4");
+
 
 
 
@@ -51,22 +67,42 @@ function getRestaurantInfo(cityID) {
         return response.json();
     })
     .then(function(data) {
-        const restTitleEl = document.querySelector("#rest-1");
-        restTitleEl.textContent =  data.data[0].name;
+        //const restTitleEl = document.querySelector("#rest-1");
+        //restTitleEl.textContent =  data.data[0].name;
         //for (let i = 0; i < 4; i++){
             //console.log(data);
             //console.log("Name: ", data.data[i].name)
             //restaurantTitle.textContent = data.data[0].name
+            title1El.textContent = data.data[0].name;
+            title2El.textContent = data.data[1].name;
+            title3El.textContent = data.data[2].name;
+            title4El.textContent = data.data[3].name;
+
             //console.log("Address: ", data.data[i].address)
+            p1El.textContent = data.data[0].address;
+            p2El.textContent = data.data[1].address;
+            p3El.textContent = data.data[2].address;
+            p4El.textContent = data.data[3].address;
+
             //console.log("Website: ", data.data[i].website)
+            link1El.setAttribute("href", data.data[0].website);
+            link2El.setAttribute("href", data.data[1].website);
+            link3El.setAttribute("href", data.data[2].website);
+            link4El.setAttribute("href", data.data[3].website);
+
             //console.log("Picture: ", data.data[i].photo.images.original.url)
+            img1El.setAttribute("src", data.data[0].photo.images.original.url);
+            img2El.setAttribute("src", data.data[1].photo.images.original.url);
+            img3El.setAttribute("src", data.data[2].photo.images.original.url);
+            img4El.setAttribute("src", data.data[3].photo.images.original.url);
+
+
             //localStorage.setItem("test", data.data[i].name);
             //imageEl.setAttribute("src", localStorage.getItem("imate-test"));
-        //}
+        // }
 
     });
 }
-
 
 
 
