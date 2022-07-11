@@ -11,40 +11,55 @@
   <link type="text/css" rel="stylesheet" href="./assets/css/materialize.css" media="screen,projection" />
   <!-- custom css -->
   <link rel="stylesheet" href="./assets/css/style.css" />
-  <title>Git There</title>
+  <title>Git Me There</title>
   <!--Let browser know website is optimized for mobile-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 
-<body id="page-container  >
-  <header class="page-header">
-    <div class="container">
-      <div class="col s12">
-        <h1 class="center">Title of Project</h1>
-        <h3 class="center">Kicks or wheels?</h3>
-        
-      </div>
+<body id="page-container>
+  <header class=" page-header">
+  <div class="container">
+    <div class="col s12">
+      <h1 id="homepage-header" class="center">Git Me There</h1>
+      <!-- <h3 class="center">Kicks or wheels?</h3> -->
+
     </div>
+  </div>
   </header>
 
   <main class="container">
     <div class="row">
       <div class="col s12 center">
-      <p id="header3">We making getting around your next destination location alittle easier!</p>
+        <p id="header3">We making getting around your next destination location a little easier!</p>
+      </div>
     </div>
-  </div>
     <div class="row center">
       <div class="col s4 offset-s4 center">
         <div class="input-field">
           <!-- <div class="textarea1 center"> -->
-          <textarea class="materialize-textarea" id="search-input"  placeholder="Enter your Destination"></textarea>
-       <!-- <label for="textarea1" id="custom-tag">Enter your Destination</label><br>  -->
-      </div>
+          <textarea class="materialize-textarea" id="search-input" placeholder="Enter your Destination"></textarea>
+          <!-- <label for="textarea1" id="custom-tag">Enter your Destination</label><br>  -->
+        </div>
         <a class="waves-effect waves-light btn center" id="search-button">Search</a>
-      
       </div>
+    </div>
 
-      <!-- <div>
+<div>
+
+  <!-- Modal -->
+  <section class="infomodal">
+    <div id="modal3" class="modal">
+      <div class="modal-content">
+        <h4 id="info-modal-heading">Where you going?</h4>
+        <p id="info-modal-content">Slow down there partner. Make sure you enter a city before clicking that Search button.</p>
+      </div>
+      <div class="modal-footer">
+        <a href="#!" class="modal-close waves-effect btn-flat">Git It</a>
+      </div>
+    </div>
+  </section>
+
+    <!-- <div>
         <div class="img-container center">
           <div class="transportation">
             <h6>Transportation</h6>
@@ -52,23 +67,23 @@
             <img id="walking" src="assets/images/arturo-castaneyra-tPE60iK97qw-unsplash.jpg" width="300" height="300" />
             <img id="scooter" src="assets/images/martin-katler-r9gEejXAU3Y-unsplash.jpg" width="300" height="300" />
             <! <span class="img-container-transportation">Transportation</span> -->
-          <!-- </div> -->
-          <!-- <div class="restaurant">
+    <!-- </div> -->
+    <!-- <div class="restaurant">
             <h6>Dining</h6>
             <img id="car" src="assets/images/louis-hansel-MlPD-AzZYMg-unsplash.jpg" width="300" height="300" />
             <img id="walking" src="assets/images/louis-hansel-wXkGvQJWI-Y-unsplash.jpg" width="300" height="300" />
             <img id="scooter" src="assets/images/saahil-khatkhate-kfDsMDyX1K0-unsplash.jpg" width="300" height="300" />
             <!- <span class="img-container-restaurants">Dining</span> -->
-          <!-- </div> --> 
-          <!-- <div class="thingsTodo"> -->
-            <!-- <img id="car" src="assets/images/markus-spiske-Ivfu9j4OLck-unsplash.jpg" width="200" height="200" /> -->
-            <!-- <img id="walking" src="assets/images/matty-adame-nLUb9GThIcg-unsplash.jpg" width="200" height="200" /> -->
-            <!-- <img id="scooter" src="assets/images/aditya-chinchure-9tZhyQskezA-unsplash.jpg" width="200" height="200" /> -->
-            <!-- <span class="img-container-restaurants">Things to Do</span> -->
-          <!-- </div> -->
-       
-          
-        
+    <!-- </div> -->
+    <!-- <div class="thingsTodo"> -->
+    <!-- <img id="car" src="assets/images/markus-spiske-Ivfu9j4OLck-unsplash.jpg" width="200" height="200" /> -->
+    <!-- <img id="walking" src="assets/images/matty-adame-nLUb9GThIcg-unsplash.jpg" width="200" height="200" /> -->
+    <!-- <img id="scooter" src="assets/images/aditya-chinchure-9tZhyQskezA-unsplash.jpg" width="200" height="200" /> -->
+    <!-- <span class="img-container-restaurants">Things to Do</span> -->
+    <!-- </div> -->
+
+
+
   </main>
 
   <footer class="page-footer custom-footer">
@@ -80,6 +95,8 @@
   </footer>
 
   <!--JavaScript at end of body for optimized loading-->
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script type="text/javascript" src="./assets/js/restaurants.js"></script>
   <script type="text/javascript" src="./assets/js/materialize.js"></script>
   <script type="text/javascript" src="./assets/js/script.js"></script>
@@ -87,5 +104,3 @@
 
 
 </html>
-
-

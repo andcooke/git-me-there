@@ -4,10 +4,21 @@ let city;
 let restaurantAPI; 
 let cityID;
 
+// Code for Modal
+$(document).ready(function(){
+    $('.modal').modal();
+})
+
+function toggleModal(){
+    var instance = M.Modal.getInstance($('#modal3'))
+    instance.open();
+}
+
 searchBtnEl.addEventListener("click", function() {
     city = searchInputEl.value
     if (!city) {
-        window.alert("Please input a city")
+        // window.alert("Please input a city")
+        toggleModal();
     } else {
         getRestaurants();
     }
