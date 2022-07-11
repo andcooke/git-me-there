@@ -18,24 +18,25 @@ let link2El = document.querySelector("#link2");
 let link3El = document.querySelector("#link3");
 let link4El = document.querySelector("#link4");
 
+let recentSearchContainer = document.querySelector("#recent-searches")
 
-
+let recentSearches = [];
 
 function getParams() {
     //console.log(document.location.search);
     const city = document.location.search.split("=").pop();
     getRestaurants(city);
-
+    saveButton(city);
+    printButtons(recentSearches);
 };
 
 
 function getRestaurants (city) {
-
     let getCityIdAPI = `https://travel-advisor.p.rapidapi.com/locations/search?query=${city}&limit=4&offset=0&units=km&location_id=1&currency=USD&sort=relevance&lang=en_US`;
     const options = {
         method: 'GET',
         headers: {
-            'X-RapidAPI-Key': 'b95d5ed815mshc7dd19832c693c4p11f823jsndfc45b75b8c8',
+            'X-RapidAPI-Key': '37285586d4msh5a231a270927e6dp162202jsne9a39080347a',
             'X-RapidAPI-Host': 'travel-advisor.p.rapidapi.com'
         }
     };
@@ -57,7 +58,7 @@ function getRestaurantInfo(cityID) {
     const options = {
         method: 'GET',
         headers: {
-            'X-RapidAPI-Key': 'b95d5ed815mshc7dd19832c693c4p11f823jsndfc45b75b8c8',
+            'X-RapidAPI-Key': '37285586d4msh5a231a270927e6dp162202jsne9a39080347a',
             'X-RapidAPI-Host': 'travel-advisor.p.rapidapi.com'
         }
     };
@@ -105,6 +106,41 @@ function getRestaurantInfo(cityID) {
 }
 
 
-
-getParams()
+function saveButton(city) {
+    if (localStorage.getItem("recent")) {
+        recentSearches = JSON.parse(localStorage.getItem("recent"))
+    }
+    if (!recentSearches.includes(city)) {
+        recentSearches.push(city)
+        localStorage.setItem("recent", JSON.stringify(recentSearches))
+    }
+}
  
+// //replace "%20" with " "
+
+function printButtons(recentSearch) {
+    // console.log(recentSearch)
+    if (recentSearch.length > 0){
+        for (let i=0; i< recentSearch.length; i++){
+            console.log(recentSearch[i]);
+            if (recentSearch[i].includes("%20")) {
+                recentSearch[i] = recentSearch[i].replace("%20", " ");
+            }
+            let recentBtn = document.createElement("a");
+            recentBtn.textContent = recentSearch[i];
+            recentBtn.setAttribute("class", "waves-effect waves-light btn");
+            recentBtn.setAttribute("id", "search-button");
+            recentSearchContainer.appendChild(recentBtn);
+            recentBtn.addEventListener("click", function (event) {
+                event.preventDefault();
+                let newQueryString = "./results.html?q=" + recentSearch[i];
+                location.assign(newQueryString);
+            })
+        }
+    }
+}
+
+
+
+getParams();
+
