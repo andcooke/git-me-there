@@ -6,7 +6,8 @@ body {
   background-image: url("../images/photo-1517732306149-e8f829eb588a.jpg");
   background-repeat: no-repeat;
   background-size: 100%;
-  font-family: fantasy;
+  font-family: 'Padauk', sans-serif;
+  font-family: 'Rajdhani', sans-serif;
 } 
   
 main {
@@ -27,7 +28,8 @@ main {
 }
 ::placeholder {
   text-align: center;
-  font-family: fantasy;
+  font-family: 'Padauk', sans-serif;
+  
 }
 
 #search-button {
@@ -37,6 +39,7 @@ main {
 /* Class Selectors */
 .container{
   opacity: 500;
+  
 }   
 
 /* .center{
@@ -79,17 +82,28 @@ main {
 
 /* ID Selectors */
 #homepage-header {
+  font-size: 120px;
   font-weight: 900;
-  color: beige;
-  text-shadow: 0 0 3px black;
+  color: #0B2559;
+  text-shadow: 0 0 20px #F2C12E;
+  text-decoration-color: black;
 }
 
 #header3{
+  font-size: 70px;
   font-weight: 900;
   font-size: x-large;
-  color: beige;
-  text-shadow: 0 0 3px black;
+  background-color: #FED900;
+  border-radius: 100px;
+  padding: 12px;
+  color: #0B2559;
+  text-shadow: 0 0 20px #F2C12E;
+  text-decoration-color: white;
 } 
+
+#text-tag{
+  width: 70%;
+}
  
 #search-input{
   background-color: white;
@@ -100,6 +114,7 @@ main {
 }
 
 #textarea1 {
+  font-family: 'Padauk', sans-serif;
   text-decoration: none;
   text-shadow: none;
 }
