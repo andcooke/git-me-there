@@ -29,11 +29,12 @@
   <main class="container">
     <div class="row">
       <!-- walking-score -->
-      <div class="col s12 m4 score-box">
+      <div class="col s12 m3 score-box">
         <div class="score">Walking Score: <span id="walking-score"></span></div>
         <div class="score">Word on the Street:<span id="walk-description"></span></div>
         <div class="score">Biking Score: <span id="biking-score"></span></div>
         <div class="score">Word on the Street:<span id="bike-description"></span></div>
+
         <div>
           <!-- empty div for nickname of city? eg. walker's paradise, biker's paradise -->
         </div>
@@ -50,10 +51,10 @@
 
 
       <div class="row">
-        <div class="col s12 m4">
-          <div class="card card-panel hoverable">
+        <div class="col s12 m4 col-content">
+          <div class="card card-panel hoverable custom-card">
             <div class="card-image">
-              <img class="responsive-img" id="img1">
+              <img class="custom-card-height" id="img1">
               <span class="card-title" id="title1"></span>
             </div>
             <div class="card-content">
@@ -65,10 +66,10 @@
           </div>
         </div>
 
-        <div class="col s12 m4">
-          <div class="card card-panel hoverable">
+        <div class="col s12 m4 col-content">
+          <div class="card card-panel hoverable custom-card">
             <div class="card-image">
-              <img class="responsive-img" id="img2">
+              <img class="custom-card-height" id="img2">
               <span class="card-title" id="title2"></span>
             </div>
             <div class="card-content">
@@ -81,10 +82,10 @@
         </div>
 
         <div class="row">
-          <div class="col s12 m4  offset-m4">
-            <div class="card card-panel hoverable">
+          <div class="col s12 m4  col-content">
+            <div class="card card-panel hoverable custom-card">
               <div class="card-image">
-                <img class="responsive-img" id="img3">
+                <img class="custom-card-height" id="img3">
                 <span class="card-title" id="title3"></span>
               </div>
               <div class="card-content">
@@ -96,10 +97,10 @@
             </div>
           </div>
 
-          <div class="col s12 m4">
-            <div class="card card-panel hoverable">
+          <div class="col s12 m4 ">
+            <div class="card card-panel hoverable custom-card">
               <div class="card-image">
-                <img class="responsive-img" id="img4">
+                <img class="custom-card-height" id="img4">
                 <span class="card-title" id="title4"></span>
               </div>
               <div class="card-content">
@@ -117,7 +118,7 @@
           <div class="center col s12 m4 offset-m4">
             Git to your next location!
             <div class="input-field col s12">
-              <input id="textarea1" class="materialize-textarea" placeholder="Enter Your Destination"></input>
+              <input id="search-input" class="materialize-textarea" placeholder="Enter Your Destination"></input>
               <!-- <label for="textarea1">Enter Your Destination</label> -->
             </div>
             <div>
@@ -162,7 +163,9 @@
   <script type="text/javascript" src="./assets/js/restaurants.js"></script>
   <script type="text/javascript" src="./assets/js/materialize.js"></script>
   <script src="./assets/js/script.js" type="text/javascript"></script>
-  
+
+  <script src="./assets/js/search.js" type="text/javascript"></script>
+
 </body>
 
 </html>
