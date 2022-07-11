@@ -1,13 +1,15 @@
+var walkScoreEl = document.getElementById('walking-score');
+var bikeScoreEl= document.getElementById('biking-score');
+var walkDescription = document.getElementById('walk-description');
+var bikeDescription = document.getElementById('bike-description');
 
 
+function getParams (){
+   var displayScore = document.location.search.split('=').pop();
+   getLatLon(displayScore)
+}
 
-var userSearch = prompt("Where do you want to go");
-// variables for all the things im searching for
-var searchinputEl = document.getElementById('search-input');
-// var address = searchinputEl.value
-
-
-function getLatLon(){
+function getLatLon(userSearch){
 
     // let userSearch = document.querySelector(".btn");
     // console.log(userSearch, "search fired properly");
@@ -32,11 +34,17 @@ fetch('https://api.openweathermap.org/data/2.5/weather?q='+ userSearch + '&appid
 })
 .then(function(data){
     console.log(data);
+    console.log(data.bike.score);
+    bikeScoreEl.textContent = data.bike.score;
+    bikeDescription.textContent = data.bike.description;
+    console.log(data.walkscore);
+    walkScoreEl.textContent = data.walkscore;
+    walkDescription.textContent = data.description;
 })
 });
     };
     
-    getLatLon()
+    getParams();
 
     // does query selector go inside or outside the function, before or after
     // let userSearch = document.querySelector(".btn");
@@ -44,10 +52,13 @@ fetch('https://api.openweathermap.org/data/2.5/weather?q='+ userSearch + '&appid
 
 
     // add event listener to start button 
-    addEventListener
+    
 
     // appending different parameters to the object 
     
+    // var bikeDescription = document.createElement('span')
+    // bikeDescription.textContent = data.bike.description;
+    // bikeScoreEl.appendChild(bikeDescription)
 
 
 
