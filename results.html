@@ -9,115 +9,143 @@
   <link type="text/css" rel="stylesheet" href="./assets/css/materialize.css" media="screen,projection" />
   <!-- custom css -->
   <link rel="stylesheet" href="./assets/css/style.css">
-  <title>Git There</title>
+  <title>GMT Score</title>
   <!--Let browser know website is optimized for mobile-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 
-<body>
+<body id="body-results">
   <header class="page-header">
     <div class="container">
       <div class="col s12">
-        <h1 class="center">Title of Project</h1>
-        <h3 class="center">Kicks or wheels?</h3>
+        <h1 class="center">Git Me There</h1>
+        <!-- <h3 class="center">Kicks or wheels?</h3> -->
       </div>
     </div>
   </header>
 
+
   <!-- main content -->
   <main class="container">
-
-    <div class="row center">
-
-      <div class="col s4">
-        Flinstonemobile, scooter or train?
-        <br>
-        <br>
-        Decide how you get around the next place you visit!
-        <div class="input-field col s12">
-          <textarea id="textarea1" class="materialize-textarea"></textarea>
-          <label for="textarea1">Enter Location</label>
+    <div class="row">
+      <!-- walking-score -->
+      <div class="col s12 m4 score-box">
+        <div class="score">Walking Score: <span id="walking-score"></span></div>
+        <div class="score">Word on the Street:<span id= "walk-description"></span></div>
+        <div class="score">Biking Score: <span id="biking-score"></span></div>
+        <div class="score">Word on the Street:<span id= "bike-description"></span></div>
+        <div>
+          <!-- empty div for nickname of city? eg. walker's paradise, biker's paradise -->
         </div>
         <div>
-          <a class="waves-effect waves-light btn center">Search</a>
-        </div>
 
+          <!-- another empty div for unforeseen things to add -->
+
+        </div>
+        <br>
+        <!-- the following will show up if walking score > certain number -->
+        <div class="center hidden score"> <a href="https://m.uber.com/ul/?action=setPickup"><img class="responsive-img"
+              src="./assets/images/uber_rides_api_icon_2x_28px.png" alt="Uber Logo"></a> <br>Need a ride?</div>
       </div>
 
+
       <div class="row">
-        <div class="col s4">
+        <div class="col s12 m4">
           <div class="card card-panel hoverable">
             <div class="card-image">
-              <img src="images/sample-1.jpg">
-              <span class="card-title">Card Title</span>
+              <img class="responsive-img" id="img1">
+              <span class="card-title" id="title1"></span>
             </div>
             <div class="card-content">
-              <p>I am a very simple card. I am good at containing small bits of information.
-                I am convenient because I require little markup to use effectively.</p>
+              <p id="p1"></p>
             </div>
             <div class="card-action">
-              <a href="#">This is a link</a>
+              <a href="#" id="link1">Go to website</a>
             </div>
           </div>
         </div>
 
-        <div class="col s4">
+        <div class="col s12 m4">
           <div class="card card-panel hoverable">
             <div class="card-image">
-              <img src="images/sample-1.jpg">
-              <span class="card-title">Card Title</span>
+              <img class="responsive-img" id="img2">
+              <span class="card-title" id="title2"></span>
             </div>
             <div class="card-content">
-              <p>I am a very simple card. I am good at containing small bits of information.
-                I am convenient because I require little markup to use effectively.</p>
+              <p id="p2"></p>
             </div>
             <div class="card-action">
-              <a href="#">This is a link</a>
+              <a href="#" id="link2">Go to website</a>
             </div>
           </div>
         </div>
 
         <div class="row">
-          <div class="col s4">
-            <!--Empty column-->
-          </div>
-          <div class="col s4">
+          <div class="col s12 m4  offset-m4">
             <div class="card card-panel hoverable">
               <div class="card-image">
-                <img src="images/sample-1.jpg">
-                <span class="card-title">Card Title</span>
+                <img class="responsive-img" id="img3">
+                <span class="card-title" id="title3"></span>
               </div>
               <div class="card-content">
-                <p>I am a very simple card. I am good at containing small bits of information.
-                  I am convenient because I require little markup to use effectively.</p>
+                <p id="p3"></p>
               </div>
               <div class="card-action">
-                <a href="#">This is a link</a>
+                <a href="#" id="link3">Go to website</a>
               </div>
             </div>
           </div>
 
-          <div class="col s4">
+          <div class="col s12 m4">
             <div class="card card-panel hoverable">
               <div class="card-image">
-                <img src="images/sample-1.jpg">
-                <span class="card-title">Card Title</span>
+                <img class="responsive-img" id="img4">
+                <span class="card-title" id="title4"></span>
               </div>
               <div class="card-content">
-                <p>I am a very simple card. I am good at containing small bits of information.
-                  I am convenient because I require little markup to use effectively.</p>
+                <p id="p4"></p>
               </div>
               <div class="card-action">
-                <a href="#">This is a link</a>
+                <a href="#" id="link4">Go to website</a>
               </div>
             </div>
           </div>
+        </div>
+
+        <!-- search for new location -->
+        <div class="row">
+          <div class="center col s12 m4 offset-m4">
+            Git to your next location!
+            <div class="input-field col s12">
+              <input id="search-input" class="materialize-textarea" placeholder="Enter Your Destination"></input>
+              <!-- <label for="textarea1">Enter Your Destination</label> -->
+            </div>
+            <div>
+              <a class="waves-effect waves-light btn" id="search-button">Search</a>
+            </div>
+            <div>
+              <!-- empty div for old searches to show up add id-->
+            </div>
+          </div>
+
 
         </div>
 
-
+  <!-- Modal -->
+  <section class="infomodal">
+    <div id="modal3" class="modal">
+      <div class="modal-content">
+        <h4 id="info-modal-heading">Where you going?</h4>
+        <p id="info-modal-content">Slow down there partner. Make sure you enter a city before clicking that Search button.</p>
+      </div>
+      <div class="modal-footer">
+        <a href="#!" class="modal-close waves-effect btn-flat">Git It</a>
+      </div>
+    </div>
+  </section>
   </main>
 
+</div>
 
   <footer class="page-footer custom-footer">
     <div class="container">
@@ -129,8 +157,12 @@
   </footer>
 
   <!--JavaScript at end of body for optimized loading-->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+  <script type="text/javascript" src="./assets/js/restaurants.js"></script>
   <script type="text/javascript" src="./assets/js/materialize.js"></script>
   <script src="./assets/js/script.js" type="text/javascript"></script>
+  <script src="./assets/js/search.js" type="text/javascript"></script>
 </body>
 
 </html>

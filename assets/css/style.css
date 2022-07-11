@@ -88,15 +88,14 @@ main {
 /* ID Selectors */
 #homepage-header {
   font-weight: 900;
-  color: white;
+  color: beige;
   text-shadow: 0 0 3px black;
-  
 }
 
 #header3{
   font-weight: 900;
   font-size: x-large;
-  color: white;
+  color: beige;
   text-shadow: 0 0 3px black;
 } 
  
