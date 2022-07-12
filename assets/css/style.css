@@ -1,6 +1,6 @@
 /* Element Selectors */
 body {
-  color:orange;
+  color:darkgoldenrod;
   display: flex;
   min-height: 100vh;
   flex-direction: column;
@@ -10,6 +10,11 @@ body {
   font-family: 'Padauk', sans-serif;
   font-family: 'Rajdhani', sans-serif;
 } 
+
+body:hover {
+  background-color:lightsalmon;
+  color:rgb(142, 75, 25);
+}
   
 main {
   flex: 1 0 auto;
@@ -67,7 +72,7 @@ main {
   text-align:center;
   color:#0B2559;
 }
-
+/* 
 .score-box {
   border: 2px solid black;
   background-color: white;
@@ -75,7 +80,8 @@ main {
   border-radius: 10px;
   line-height: 30px;
   color:darkgoldenrod;
-}
+} */
+
 
 .score {
   padding: 15px;
@@ -129,11 +135,18 @@ main {
 
 #body-results {
   background-image: none;
-  background-color: grey;
+  background-color: peachpuff;
 }
 
 .custom-card {
   max-height: 25% ;
-  background-color:peachpuff;
+  background-color:white;
 
+}
+.custom-card:hover {
+  background-color:peachpuff;
+}
+.center {
+  color:rgb(183, 138, 3);
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
 }
