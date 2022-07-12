@@ -1,6 +1,6 @@
 # Git Me There
 
-Deployed link:
+Deployed link: [Git Me There]()
 
 Deployment Date - July 12,2022
 
@@ -20,23 +20,31 @@ no special software is required to operate on Git me there site.
 Application link: (put link to deployed site)
 
 ## instructions-
-    - click Git Me There link: ![GIT ME THERE ]()
+    - Click Git Me There link: ![GIT ME THERE ]()
+![Home Page](./assets/images/Screen%20Shot%202022-07-12%20at%201.04.41%20PM.png)
     
 
 
-    - type in your desired destination anywhere in the world
-    [screen shot of example city typed]
+    - Type in your desired destination 
+![desired destination](./assets/images/Screen%20Shot%202022-07-12%20at%203.32.07%20PM.png)
 
 
 
-    - lead to results page
-    [screen shot of results page]
+    - Next stop your results page
+![Results Page](./assets/images/Screen%20Shot%202022-07-12%20at%203.16.38%20PM.png)
 
-    - walk score, biking score
-    [screen shot]
+    - Walking score, Biking score for your desired destination
+![Walkscor, Biking Score](./assets/images/Screen%20Shot%202022-07-12%20at%203.26.07%20PM.png)
 
-    - restaurants cards
-    [screen shot]
+
+    -Uber ride share for less walkable cities
+![uber](./assets/images/Screen%20Shot%202022-07-12%20at%203.42.15%20PM.png)
+
+    - Restaurants cards
+![Restaurants card](./assets/images/Screen%20Shot%202022-07-12%20at%203.17.24%20PM.png)
+
+    -Remember your previous searches
+![previous search](./assets/images/Screen%20Shot%202022-07-12%20at%203.16.53%20PM.png)
 
 
  ## Challenges During Developement:
@@ -75,6 +83,10 @@ Application link: (put link to deployed site)
 [Materialize](https://materializecss.com/)<BR>
 [rapidapi](https://rapidapi.com/apidojo/api/travel-advisor/)<BR>
 [Walkscoreapi](https://www.walkscore.com/professional/api.php)<BR>
+HTML<BR>
+CSS<BR>
+JavaScript
+
 
 
 ## Original Contributors:
