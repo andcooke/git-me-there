@@ -34,8 +34,6 @@ fetch('https://api.openweathermap.org/data/2.5/weather?q='+ userSearch + '&appid
         fetch('https://salty-mountain-68764.herokuapp.com/api.walkscore.com/score?format=json&address='+ userSearch +'&lat=' + lat + '&lon=' + lon + '&transit=1&bike=1&wsapikey=8d073cbbe64bd87c6d0e21ed06c0c5b3')
         .then(function(response){
             return response.json();
-
-
         })
         .then(function(data){
             //console.log(data);

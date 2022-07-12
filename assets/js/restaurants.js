@@ -25,7 +25,7 @@ let recentSearches = [];
 function getParams() {
     //console.log(document.location.search);
     const city = document.location.search.split("=").pop();
-    // getRestaurants(city);
+    getRestaurants(city);
     saveButton(city);
     printButtons(recentSearches);
 };
@@ -46,7 +46,6 @@ function getRestaurants (city) {
         return response.json();
     })
     .then(function(data) {
-        //works -> console.log(city)
         //console.log(data)
         //console.log(data.data[0].result_object.location_id);
         const cityID = data.data[0].result_object.location_id;
@@ -121,7 +120,7 @@ function printButtons(recentSearch) {
     // console.log(recentSearch)
     if (recentSearch.length > 0){
         for (let i=0; i< recentSearch.length; i++){
-            console.log(recentSearch[i]);
+            //console.log(recentSearch[i]);
             if (recentSearch[i].includes("%20")) {
                 recentSearch[i] = recentSearch[i].replace("%20", " ");
             }
