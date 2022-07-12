@@ -1,6 +1,6 @@
 # Git Me There
 
-Deployed link: [Git Me There]()
+Deployed link: [Git Me There](https://andcooke.github.io/git-me-there/)
 
 Deployment Date - July 12,2022
 
@@ -20,7 +20,8 @@ Any device with access to the internet can use the Git Me There site.
 Finding APIs that would work with the idea, and with a good amount of availible requests.
 
 ## Instructions-
-    - Click Git Me There link: ![GIT ME THERE ]()
+    - Click Git Me There link: 
+[GIT ME THERE](https://andcooke.github.io/git-me-there/) <BR><BR>
 ![Home Page](./assets/images/Screen%20Shot%202022-07-12%20at%201.04.41%20PM.png)
     
 
