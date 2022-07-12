@@ -2,6 +2,7 @@ var walkScoreEl = document.getElementById('walking-score');
 var bikeScoreEl= document.getElementById('biking-score');
 var walkDescription = document.getElementById('walk-description');
 var bikeDescription = document.getElementById('bike-description');
+var uberEl = document.getElementById('uber');
 
 
 function getParams (){
@@ -39,6 +40,9 @@ fetch('https://api.openweathermap.org/data/2.5/weather?q='+ userSearch + '&appid
         .then(function(data){
             console.log(data);
             console.log(data.bike.score);
+            if (data.bike.score > 50 || data.walkscore > 50) {
+                uberEl.classList.remove('hidden')
+            }
             bikeScoreEl.textContent = data.bike.score;
             bikeDescription.textContent = data.bike.description;
             console.log(data.walkscore);

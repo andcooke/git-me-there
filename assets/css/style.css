@@ -63,7 +63,7 @@ main {
 .custom-footer {
   padding-bottom: 5px;
   background-color:white;
-  color;
+  /* color; */
   text-align:center;
   color:#0B2559;
 }
@@ -84,9 +84,9 @@ main {
 
 
 /* remove class when walking score <50 */
-/* .hidden {
+.hidden {
   display: none;
-} */
+}
 
 /* ID Selectors */
 #homepage-header {
