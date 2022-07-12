@@ -34,11 +34,21 @@ main {
 }
 
 #search-button {
-  width: 100px;
+  width: auto;
   border-radius: 15px;
+  margin: 5px 7px;
   background-color:black;
   color:white;
 }
+
+#search-button:hover {
+  color: #0B2559;
+  font-weight: bold;
+  background-color: #ffd65b;
+  box-shadow: 0px 0px 10px #F2C12E;
+}
+
+
 /* Class Selectors */
 .container{
   opacity: 500;
@@ -115,7 +125,8 @@ main {
  
 #search-input{
   background-color: white;
-  padding-left: 25px;
+  width: 50px;
+  padding: 0 10px;
   border-radius: 12px;
   box-shadow: 100px;
   width: min-content;

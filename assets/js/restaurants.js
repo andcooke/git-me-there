@@ -25,7 +25,7 @@ let recentSearches = [];
 function getParams() {
     //console.log(document.location.search);
     const city = document.location.search.split("=").pop();
-    getRestaurants(city);
+    // getRestaurants(city);
     saveButton(city);
     printButtons(recentSearches);
 };
@@ -125,7 +125,7 @@ function printButtons(recentSearch) {
             if (recentSearch[i].includes("%20")) {
                 recentSearch[i] = recentSearch[i].replace("%20", " ");
             }
-            let recentBtn = document.createElement("a");
+            let recentBtn = document.createElement("button");
             recentBtn.textContent = recentSearch[i];
             recentBtn.setAttribute("class", "waves-effect waves-light btn");
             recentBtn.setAttribute("id", "search-button");
