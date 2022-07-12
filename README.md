@@ -6,69 +6,69 @@ Deployment Date - July 12,2022
 
 
 ## The Idea:
-Where does one go to get specific detailed information about a travel destination? To prepare for vacation we often ask: Should I rent a car? can I walk around the city? what are the best restaurants to eat at? where will I stay?
+Where does one go to get specific detailed information about a travel destination? To prepare for vacation we often ask: Should I rent a car? Can I walk around the city? What are the best restaurants? Where will I stay?<BR><BR>
 
-With these questions in mind that any traveler would ask, Get me there was produced by the Illest Group!
-A traveler could visit the Git me there site, and type in any destination and instantly be given information about transportation and restaurants.
+With these questions in mind that any traveler would ask, Git Me There was produced by the Illest Group!<BR><BR>
+
+A traveler could visit the Git Me There site, and type in any destination and instantly be given information about transportation and restaurants.<BR><BR>
 
 ## Getting Started:
-no special software is required to operate on Git me there site.
+Any device with access to the internet can use the Git Me There site.
 
-## Prerequisites- finding api's that would work with the idea, and with a good amount of availible requests
+## Prerequisites:
 
-## User Guide:
-Application link: (put link to deployed site)
+Finding APIs that would work with the idea, and with a good amount of availible requests.
 
-## instructions-
+## Instructions-
     - Click Git Me There link: ![GIT ME THERE ]()
 ![Home Page](./assets/images/Screen%20Shot%202022-07-12%20at%201.04.41%20PM.png)
     
 
 
-    - Type in your desired destination 
+    - Type in your desired destination. 
 ![desired destination](./assets/images/Screen%20Shot%202022-07-12%20at%203.32.07%20PM.png)
 
 
 
-    - Next stop your results page
+    - Next stop, your results page:
 ![Results Page](./assets/images/Screen%20Shot%202022-07-12%20at%203.16.38%20PM.png)
 
-    - Walking score, Biking score for your desired destination
+    - Walking score and biking score are printed for your desired destination.
 ![Walkscor, Biking Score](./assets/images/Screen%20Shot%202022-07-12%20at%203.26.07%20PM.png)
 
 
-    -Uber ride share for less walkable cities
+    - Uber ride share link is available for less walkable cities.
 ![uber](./assets/images/Screen%20Shot%202022-07-12%20at%203.42.15%20PM.png)
 
-    - Restaurants cards
+    - Restaurant cards show top rated restaurants in the city.
 ![Restaurants card](./assets/images/Screen%20Shot%202022-07-12%20at%203.17.24%20PM.png)
 
-    -Remember your previous searches
+    - Buttons below remember your previous searches.
 ![previous search](./assets/images/Screen%20Shot%202022-07-12%20at%203.16.53%20PM.png)
 
 
  ## Challenges During Developement:
-        - deciding on project
+        - Deciding on project
         - API calls have limit
         - API paid subscriptions
-        - css Framework Documentation
+        - CSS Framework Documentation
         - Working collaboratively on GitHub
 
 
- ## Process - Successes
-        - API information printed on Web site
+ ## Successes
+        - API information printed on website
         - Communication
         - Rapport
-        - Deployed Website   
+        - Deployed website   
     
     
     
  ## Directions for Future Development:
         - City name validation
         - Speed up API response
-        - Enable Walk Score to work for cities outside of America
+        - Enable walk score to work for cities outside of America
         - Tourist attractions
-        - Airbnb or Hotel options
+        - Airbnb or hotel options
         - Links to local bike/scooter rentals
         - Restaurant cards open directions in user’s map app
         - GoogleMaps API to show all restaurants in a given location
@@ -76,7 +76,7 @@ Application link: (put link to deployed site)
 
 ## Ideas for Improvement:
 
-    what can the developers do to improve this site? please offer your suggestions to the developers via the contributor's gitHub pages (links above).
+    What can the developers do to improve this site? Please offer your suggestions to the developers via the contributor's gitHub pages (links below).
 
     
 ## Built Utilizing:
