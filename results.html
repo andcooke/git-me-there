@@ -29,127 +29,133 @@
   <main class="container">
     <div class="row">
       <!-- walking-score -->
-      <div class="col s12 m3 score-box">
-        <div class="score">Walking Score: <span id="walking-score"></span></div>
-        <div class="score">Biking Score: <span id="biking-score"></span></div>
-        <div>
-          <!-- empty div for nickname of city? eg. walker's paradise, biker's paradise -->
+      <div class="col s12 m4 col-content score-box">
+        <div class="card-panel medium">
+          <div class="score">Walking Score: <span id="walking-score"></span></div>
+          <div class="score">Word on the Street:<span id="walk-description"></span></div>
+          <div class="score">Biking Score: <span id="biking-score"></span></div>
+          <div class="score">Word on the Street:<span id="bike-description"></span></div>
+          <br>
+          <!-- the following will show up if walking score > certain number -->
+          <div class="center hidden score" id="uber"> <a href="https://m.uber.com/ul/?action=setPickup"><img
+                class="responsive-img" src="./assets/images/uber_rides_api_icon_2x_28px.png" alt="Uber Logo"></a>
+            <br>Need
+            a ride?
+          </div>
         </div>
-        <div>
 
-          <!-- another empty div for unforeseen things to add -->
-
-        </div>
         <br>
         <!-- the following will show up if walking score > certain number -->
         <div class="center hidden score" id="uber"> <a href="https://m.uber.com/ul/?action=setPickup"><img class="responsive-img"
               src="./assets/images/uber_rides_api_icon_2x_28px.png" alt="Uber Logo"></a> <br>Need a ride?</div>
+
       </div>
 
 
-      <div class="row">
-        <div class="col s12 m4 col-content">
-          <div class="card card-panel hoverable custom-card">
-            <div class="card-image">
-              <img class="custom-card-height" id="img1">
-              <span class="card-title" id="title1"></span>
-            </div>
-            <div class="card-content">
-              <p id="p1"></p>
-            </div>
-            <div class="card-action">
-              <a href="#" id="link1">Go to website</a>
-            </div>
+      <div class="col s12 m4 col-content">
+        <div class="card card-panel hoverable custom-card medium">
+          <div class="card-image">
+            <img class="custom-card-height" id="img1">
+            <span class="card-title" id="title1"></span>
+          </div>
+          <div class="card-content">
+            <p id="p1"></p>
+          </div>
+          <div class="card-action">
+            <a href="#" id="link1">Go to website</a>
           </div>
         </div>
-
-        <div class="col s12 m4 col-content">
-          <div class="card card-panel hoverable custom-card">
-            <div class="card-image">
-              <img class="custom-card-height" id="img2">
-              <span class="card-title" id="title2"></span>
-            </div>
-            <div class="card-content">
-              <p id="p2"></p>
-            </div>
-            <div class="card-action">
-              <a href="#" id="link2">Go to website</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col s12 m4  col-content">
-            <div class="card card-panel hoverable custom-card">
-              <div class="card-image">
-                <img class="custom-card-height" id="img3">
-                <span class="card-title" id="title3"></span>
-              </div>
-              <div class="card-content">
-                <p id="p3"></p>
-              </div>
-              <div class="card-action">
-                <a href="#" id="link3">Go to website</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col s12 m4 ">
-            <div class="card card-panel hoverable custom-card">
-              <div class="card-image">
-                <img class="custom-card-height" id="img4">
-                <span class="card-title" id="title4"></span>
-              </div>
-              <div class="card-content">
-                <p id="p4"></p>
-              </div>
-              <div class="card-action">
-                <a href="#" id="link4">Go to website</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- search for new location -->
-        <div class="row">
-          <div class="center col s12 m4 offset-m4">
-            Git to your next location!
-            <div class="input-field col s12">
-              <input id="textarea1" class="materialize-textarea" placeholder="Enter Your Destination"></input>
-              <!-- <label for="textarea1">Enter Your Destination</label> -->
-            </div>
-            <div>
-              <a class="waves-effect waves-light btn" id="search-button">Search</a>
-            </div>
-            <div id = "recent-searches">
-              <!-- empty div for old searches to show up add id-->
-            </div>
-          </div>
-
-
-        </div>
-
-  <!-- Modal -->
-  <section class="infomodal">
-    <div id="modal3" class="modal">
-      <div class="modal-content">
-        <h4 id="info-modal-heading">Where you going?</h4>
-        <p id="info-modal-content">Slow down there partner. Make sure you enter a city before clicking that Search button.</p>
       </div>
-      <div class="modal-footer">
-        <a href="#!" class="modal-close waves-effect btn-flat">Git It</a>
+
+      <div class="col s12 m4 col-content">
+        <div class="card card-panel hoverable custom-card medium">
+          <div class="card-image">
+            <img class="custom-card-height" id="img2">
+            <span class="card-title" id="title2"></span>
+          </div>
+          <div class="card-content">
+            <p id="p2"></p>
+          </div>
+          <div class="card-action">
+            <a href="#" id="link2">Go to website</a>
+          </div>
+        </div>
       </div>
     </div>
-  </section>
+
+    <!-- second row -->
+
+    <div class="row">
+      <div class="col s12 m4 offset-m4 col-content">
+        <div class="card card-panel hoverable custom-card medium">
+          <div class="card-image">
+            <img class="custom-card-height" id="img3">
+            <span class="card-title" id="title3"></span>
+          </div>
+          <div class="card-content">
+            <p id="p3"></p>
+          </div>
+          <div class="card-action">
+            <a href="#" id="link3">Go to website</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col s12 m4 ">
+        <div class="card card-panel hoverable custom-card medium">
+          <div class="card-image">
+            <img class="custom-card-height" id="img4">
+            <span class="card-title" id="title4"></span>
+          </div>
+          <div class="card-content">
+            <p id="p4"></p>
+          </div>
+          <div class="card-action">
+            <a href="#" id="link4">Go to website</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- search for new location -->
+    <div class="row">
+      <div class="center col s12 m4 offset-m4">
+        Git to your next location!
+        <div class="input-field col s12">
+          <input id="search-input" class="materialize-textarea" placeholder="Enter Your Destination"></input>
+          <!-- <label for="textarea1">Enter Your Destination</label> -->
+        </div>
+        <div>
+          <a class="waves-effect waves-light btn" id="search-button">Search</a>
+        </div>
+        <div id="recent-searches">
+          <!-- empty div for old searches to show up add id-->
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <section class="infomodal">
+      <div id="modal3" class="modal">
+        <div class="modal-content">
+          <h4 id="info-modal-heading">Where you going?</h4>
+          <p id="info-modal-content">Slow down there partner. Make sure you enter a city before clicking that Search
+            button.</p>
+        </div>
+        <div class="modal-footer">
+          <a href="#!" class="modal-close waves-effect btn-flat">Git It</a>
+        </div>
+      </div>
+    </section>
   </main>
 
-</div>
+  </div>
 
   <footer class="page-footer custom-footer">
     <div class="container">
       <div class="row">
         <div class="col-12 center">copyright &copy; 2022 Illest Group</div>
-
       </div>
     </div>
   </footer>
@@ -159,14 +165,8 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
   <script type="text/javascript" src="./assets/js/restaurants.js"></script>
   <script type="text/javascript" src="./assets/js/materialize.js"></script>
-<<<<<<< Updated upstream
-  <!-- <script src="./assets/js/script.js" type="text/javascript"></script> -->
-  
-=======
   <script src="./assets/js/script.js" type="text/javascript"></script>
   <script src="./assets/js/search.js" type="text/javascript"></script>
-
->>>>>>> Stashed changes
 </body>
 
 </html>
