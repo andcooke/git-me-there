@@ -25,25 +25,11 @@ fetch('https://api.openweathermap.org/data/2.5/weather?q='+ userSearch + '&appid
         return response.json();
     })
     .then(function(data){
-        console.log(data);
+        //console.log(data);
         var lat = data.coord.lat
         var lon = data.coord.lon
-        console.log("this works", lat)
-        console.log("this deux works", lon)
-        
-    
-
-    fetch('https://salty-mountain-68764.herokuapp.com/api.walkscore.com/score?format=json&address='+ userSearch +'&lat=' + lat + '&lon=' + lon + '&transit=1&bike=1&wsapikey=8d073cbbe64bd87c6d0e21ed06c0c5b3')
-.then(function(response){
-    return response.json();
-
-})
-.then(function(data){
-    console.log(data);
-})
-});
-    };
-
+        //console.log("this works", lat)
+        //console.log("this deux works", lon)
 
         fetch('https://salty-mountain-68764.herokuapp.com/api.walkscore.com/score?format=json&address='+ userSearch +'&lat=' + lat + '&lon=' + lon + '&transit=1&bike=1&wsapikey=8d073cbbe64bd87c6d0e21ed06c0c5b3')
         .then(function(response){
@@ -52,22 +38,20 @@ fetch('https://api.openweathermap.org/data/2.5/weather?q='+ userSearch + '&appid
 
         })
         .then(function(data){
-            console.log(data);
-            console.log(data.bike.score);
+            //console.log(data);
+            //console.log(data.bike.score);
             if (data.bike.score < 50 || data.walkscore < 50) {
                 uberEl.classList.remove('hidden');
             }
             bikeScoreEl.textContent = data.bike.score;
             bikeDescription.textContent = data.bike.description;
-            console.log(data.walkscore);
+            //console.log(data.walkscore);
             walkScoreEl.textContent = data.walkscore;
             walkDescription.textContent = data.description;
         })
         });
     }
 
-
-  
 
     getParams();
 
