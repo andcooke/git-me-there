@@ -36,7 +36,7 @@ function getRestaurants (city) {
     const options = {
         method: 'GET',
         headers: {
-            'X-RapidAPI-Key': '37285586d4msh5a231a270927e6dp162202jsne9a39080347a',
+            'X-RapidAPI-Key': 'c068737cc0msh7be384085700777p1db8bdjsn0348fc478cfc',
             'X-RapidAPI-Host': 'travel-advisor.p.rapidapi.com'
         }
     };
@@ -57,7 +57,7 @@ function getRestaurantInfo(cityID) {
     const options = {
         method: 'GET',
         headers: {
-            'X-RapidAPI-Key': '37285586d4msh5a231a270927e6dp162202jsne9a39080347a',
+            'X-RapidAPI-Key': 'c068737cc0msh7be384085700777p1db8bdjsn0348fc478cfc',
             'X-RapidAPI-Host': 'travel-advisor.p.rapidapi.com'
         }
     };
